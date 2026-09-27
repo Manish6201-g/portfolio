@@ -51,6 +51,8 @@ document.body.addEventListener('mouseleave', () => {
   btn.addEventListener('mouseleave', () => isHoveringCTA = false);
 });
 
+let currentCursorState = '';
+
 // Hardware accelerated render loop
 function update() {
   // Lerp for smooth blob movement (snappier)
@@ -68,20 +70,28 @@ function update() {
 
   if (!isMobile) {
     cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
-    if (isHoveringCTA) {
-      cursorContent.className = 'cursor-dot';
-      cursorContent.style.width = '16px';
-      cursorContent.style.height = '16px';
-    } else if (isHoveringHero) {
-      cursorContent.className = 'cursor-reveal';
-      cursorContent.innerHTML = 'REVEAL';
-      cursorContent.style.width = '64px';
-      cursorContent.style.height = '64px';
-    } else {
-      cursorContent.className = 'cursor-dot';
-      cursorContent.innerHTML = '';
-      cursorContent.style.width = '12px';
-      cursorContent.style.height = '12px';
+    
+    const targetState = isHoveringCTA ? 'cta' : (isHoveringHero ? 'hero' : 'default');
+    
+    // ONLY update DOM if state actually changed (prevents massive DOM thrashing lag)
+    if (currentCursorState !== targetState) {
+      currentCursorState = targetState;
+      if (targetState === 'cta') {
+        cursorContent.className = 'cursor-dot';
+        cursorContent.style.width = '16px';
+        cursorContent.style.height = '16px';
+        cursorContent.innerHTML = '';
+      } else if (targetState === 'hero') {
+        cursorContent.className = 'cursor-reveal';
+        cursorContent.innerHTML = 'REVEAL';
+        cursorContent.style.width = '64px';
+        cursorContent.style.height = '64px';
+      } else {
+        cursorContent.className = 'cursor-dot';
+        cursorContent.innerHTML = '';
+        cursorContent.style.width = '12px';
+        cursorContent.style.height = '12px';
+      }
     }
   }
 
