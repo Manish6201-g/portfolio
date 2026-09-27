@@ -37,11 +37,11 @@ window.addEventListener(isMobile ? 'touchmove' : 'mousemove', (e) => {
   mouseY = e.touches ? e.touches[0].clientY : e.clientY;
 });
 
-heroArea.addEventListener('mouseenter', () => {
+document.body.addEventListener('mouseenter', () => {
   isHoveringHero = true;
   revealLayer.classList.add('active');
 });
-heroArea.addEventListener('mouseleave', () => {
+document.body.addEventListener('mouseleave', () => {
   isHoveringHero = false;
   revealLayer.classList.remove('active');
 });
