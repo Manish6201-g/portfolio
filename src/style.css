@@ -24,8 +24,22 @@
     font-weight: 900;
     line-height: 0.8;
     letter-spacing: -0.05em;
-    color: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.02);
+    -webkit-text-stroke: 1px rgba(255, 63, 108, 0.1);
+    text-shadow: 0 0 30px rgba(255, 63, 108, 0.2), 0 0 80px rgba(255, 63, 108, 0.1);
     white-space: nowrap;
+    animation: neon-pulse 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes neon-pulse {
+    0% {
+      text-shadow: 0 0 20px rgba(255, 63, 108, 0.1), 0 0 50px rgba(255, 63, 108, 0.05);
+      color: rgba(255, 255, 255, 0.01);
+    }
+    100% {
+      text-shadow: 0 0 40px rgba(255, 63, 108, 0.3), 0 0 100px rgba(255, 63, 108, 0.15);
+      color: rgba(255, 255, 255, 0.04);
+    }
   }
 
   /* Layers */

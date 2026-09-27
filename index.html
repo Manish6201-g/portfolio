@@ -16,14 +16,19 @@
     <div>CODE.</div>
   </div>
 
-  <!-- LAYER 1: Clean Portrait -->
-  <div class="layer layer-1" id="hero-area">
-    <div class="image-container"></div>
-  </div>
+  <!-- Image Layers Wrapper (Fades edges so background text shows through cleanly) -->
+  <div class="absolute inset-0 z-10 pointer-events-none" style="-webkit-mask-image: radial-gradient(circle at 50% 80%, black 30%, transparent 70%); mask-image: radial-gradient(circle at 50% 80%, black 30%, transparent 70%);">
+    
+    <!-- LAYER 1: Clean Portrait -->
+    <div class="layer layer-1" id="hero-area" style="pointer-events: auto;">
+      <div class="image-container"></div>
+    </div>
 
-  <!-- LAYER 2: Futuristic Portrait (Masked) -->
-  <div class="layer layer-2" id="reveal-layer" style="--mask-x: -500px; --mask-y: -500px;">
-    <div class="image-container"></div>
+    <!-- LAYER 2: Futuristic Portrait (Masked) -->
+    <div class="layer layer-2" id="reveal-layer" style="--mask-x: -500px; --mask-y: -500px;">
+      <div class="image-container"></div>
+    </div>
+    
   </div>
 
   <!-- UI Overlay -->
