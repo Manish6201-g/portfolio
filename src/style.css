@@ -33,20 +33,30 @@
   }
 
   .text-neon div {
-    color: rgba(255, 63, 108, 0.05);
-    -webkit-text-stroke: 1px rgba(255, 63, 108, 0.2);
-    text-shadow: 0 0 30px rgba(255, 63, 108, 0.3), 0 0 80px rgba(255, 63, 108, 0.2);
-    animation: neon-pulse 4s ease-in-out infinite alternate;
+    color: rgba(255, 63, 108, 0.4);
+    -webkit-text-stroke: 2px rgba(255, 63, 108, 0.8);
+    text-shadow: 
+      0 0 20px rgba(255, 63, 108, 0.8), 
+      0 0 60px rgba(255, 63, 108, 0.6), 
+      0 0 120px rgba(255, 63, 108, 0.4);
+    animation: neon-pulse 3s ease-in-out infinite alternate;
   }
 
   @keyframes neon-pulse {
     0% {
-      text-shadow: 0 0 20px rgba(255, 63, 108, 0.2), 0 0 50px rgba(255, 63, 108, 0.1);
-      color: rgba(255, 63, 108, 0.03);
+      text-shadow: 
+        0 0 10px rgba(255, 63, 108, 0.5), 
+        0 0 40px rgba(255, 63, 108, 0.4), 
+        0 0 80px rgba(255, 63, 108, 0.2);
+      color: rgba(255, 63, 108, 0.2);
     }
     100% {
-      text-shadow: 0 0 40px rgba(255, 63, 108, 0.5), 0 0 100px rgba(255, 63, 108, 0.3);
-      color: rgba(255, 63, 108, 0.08);
+      text-shadow: 
+        0 0 30px rgba(255, 63, 108, 1), 
+        0 0 80px rgba(255, 63, 108, 0.8), 
+        0 0 150px rgba(255, 63, 108, 0.6),
+        0 0 200px rgba(255, 63, 108, 0.4);
+      color: rgba(255, 63, 108, 0.6);
     }
   }
 
