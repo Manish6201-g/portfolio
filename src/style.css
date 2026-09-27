@@ -33,30 +33,20 @@
   }
 
   .text-neon div {
-    color: rgba(255, 63, 108, 0.4);
-    -webkit-text-stroke: 2px rgba(255, 63, 108, 0.8);
-    text-shadow: 
-      0 0 20px rgba(255, 63, 108, 0.8), 
-      0 0 60px rgba(255, 63, 108, 0.6), 
-      0 0 120px rgba(255, 63, 108, 0.4);
+    color: rgba(255, 63, 108, 0.6);
+    -webkit-text-stroke: 2px #FF3F6C;
+    text-shadow: 0 0 20px #FF3F6C;
     animation: neon-pulse 3s ease-in-out infinite alternate;
   }
 
   @keyframes neon-pulse {
     0% {
-      text-shadow: 
-        0 0 10px rgba(255, 63, 108, 0.5), 
-        0 0 40px rgba(255, 63, 108, 0.4), 
-        0 0 80px rgba(255, 63, 108, 0.2);
-      color: rgba(255, 63, 108, 0.2);
+      color: rgba(255, 63, 108, 0.4);
+      text-shadow: 0 0 10px #FF3F6C;
     }
     100% {
-      text-shadow: 
-        0 0 30px rgba(255, 63, 108, 1), 
-        0 0 80px rgba(255, 63, 108, 0.8), 
-        0 0 150px rgba(255, 63, 108, 0.6),
-        0 0 200px rgba(255, 63, 108, 0.4);
-      color: rgba(255, 63, 108, 0.6);
+      color: #FF3F6C;
+      text-shadow: 0 0 30px #FF3F6C, 0 0 50px #FF3F6C;
     }
   }
 
