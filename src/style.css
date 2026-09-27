@@ -77,6 +77,7 @@
     -webkit-mask-position: var(--mask-x) var(--mask-y);
     opacity: 0;
     transition: opacity 0.3s ease;
+    will-change: -webkit-mask-position, opacity;
   }
   
   .layer-2.active {

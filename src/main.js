@@ -53,13 +53,13 @@ document.body.addEventListener('mouseleave', () => {
 
 // Hardware accelerated render loop
 function update() {
-  // Lerp for smooth blob movement
-  blobX += (mouseX - blobX) * 0.15;
-  blobY += (mouseY - blobY) * 0.15;
+  // Lerp for smooth blob movement (snappier)
+  blobX += (mouseX - blobX) * 0.25;
+  blobY += (mouseY - blobY) * 0.25;
   
-  // Lerp for custom cursor
-  cursorX += (mouseX - cursorX) * 0.3;
-  cursorY += (mouseY - cursorY) * 0.3;
+  // Instant cursor position (removes input lag feel)
+  cursorX = mouseX;
+  cursorY = mouseY;
 
   // Hardware accelerated mask position
   // Center the 400px mask (subtract 200)
@@ -67,7 +67,7 @@ function update() {
   revealLayer.style.setProperty('--mask-y', `${blobY - 200}px`);
 
   if (!isMobile) {
-    cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+    cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
     if (isHoveringCTA) {
       cursorContent.className = 'cursor-dot';
       cursorContent.style.width = '16px';
