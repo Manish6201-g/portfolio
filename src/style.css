@@ -57,7 +57,7 @@
   }
   
   .layer-1 .image-container {
-    background-image: url('/manish_dark_base.jpg');
+    background-image: url('/manish_dark_base_nobg.png');
   }
 
   .layer-2 {
@@ -76,7 +76,7 @@
   }
   
   .layer-2 .image-container {
-    background-image: url('/manish_dark_cyber.jpg');
+    background-image: url('/manish_dark_cyber_nobg.png');
   }
 
   /* UI Overlay */
