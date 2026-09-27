@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body { background: #000; }
+  .masked {
+    width: 100vw; height: 100vh;
+    background: url('public/manish_futuristic_editorial.jpg') center/contain no-repeat;
+    -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cdefs%3E%3Cfilter id='b' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3C/defs%3E%3Cpath fill='black' filter='url(%23b)' d='M200 40C300 40 360 100 360 200C360 300 300 360 200 360C100 360 40 300 40 200C40 100 100 40 200 40Z'%3E%3Canimate attributeName='d' dur='4s' repeatCount='indefinite' values='M200 40C300 40 360 100 360 200C360 300 300 360 200 360C100 360 40 300 40 200C40 100 100 40 200 40Z; M200 60C310 30 380 120 350 210C320 300 280 340 190 350C100 360 50 280 60 190C70 100 90 90 200 60Z; M200 20C280 50 340 90 370 190C400 290 310 380 200 370C90 360 20 290 30 190C40 90 120 -10 200 20Z; M200 40C300 40 360 100 360 200C360 300 300 360 200 360C100 360 40 300 40 200C40 100 100 40 200 40Z'/%3E%3C/path%3E%3C/svg%3E");
+    -webkit-mask-size: 400px;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: var(--x, 0px) var(--y, 0px);
+  }
+</style>
+<div class="masked" id="m"></div>
+<script>
+  let x=0, y=0, tx=0, ty=0;
+  window.onmousemove = e => { tx=e.clientX; ty=e.clientY; };
+  function loop() {
+    x += (tx - x)*0.1; y += (ty - y)*0.1;
+    document.getElementById('m').style.setProperty('--x', (x-200)+'px');
+    document.getElementById('m').style.setProperty('--y', (y-200)+'px');
+    requestAnimationFrame(loop);
+  }
+  loop();
+</script>
+</html>
