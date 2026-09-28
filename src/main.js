@@ -1,4 +1,4 @@
-import { createIcons, Menu, ArrowRight, ArrowUpRight } from 'lucide';
+import { createIcons, Menu, ArrowRight, ArrowUpRight, ArrowDown, Code2, Server, Bot, Mail } from 'lucide';
 import './style.css';
 
 // Initialize Lucide icons
@@ -6,7 +6,12 @@ createIcons({
   icons: {
     Menu,
     ArrowRight,
-    ArrowUpRight
+    ArrowUpRight,
+    ArrowDown,
+    Code2,
+    Server,
+    Bot,
+    Mail
   }
 });
 
@@ -37,18 +42,21 @@ window.addEventListener(isMobile ? 'touchmove' : 'mousemove', (e) => {
   mouseY = e.touches ? e.touches[0].clientY : e.clientY;
 });
 
-document.body.addEventListener('mouseenter', () => {
+const heroSection = document.getElementById('hero');
+
+heroSection.addEventListener('mouseenter', () => {
   isHoveringHero = true;
   revealLayer.classList.add('active');
 });
-document.body.addEventListener('mouseleave', () => {
+heroSection.addEventListener('mouseleave', () => {
   isHoveringHero = false;
   revealLayer.classList.remove('active');
 });
 
-[btnConnect, btnWork].forEach(btn => {
-  btn.addEventListener('mouseenter', () => isHoveringCTA = true);
-  btn.addEventListener('mouseleave', () => isHoveringCTA = false);
+const interactables = document.querySelectorAll('a, button');
+interactables.forEach(el => {
+  el.addEventListener('mouseenter', () => isHoveringCTA = true);
+  el.addEventListener('mouseleave', () => isHoveringCTA = false);
 });
 
 let currentCursorState = '';

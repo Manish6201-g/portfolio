@@ -8,95 +8,216 @@
 </head>
 <body>
 
-  <!-- Image Layers Wrapper -->
-  <div class="absolute inset-0 z-10 pointer-events-none">
-    
-    <!-- LAYER 1: Clean Portrait -->
-    <div class="layer layer-1" id="hero-area" style="pointer-events: auto;">
-      <!-- Subtle Normal Text -->
-      <div class="bg-text text-normal">
-        <div>CREATE</div>
-        <div>WEBSITES</div>
-        <div>NOT JUST</div>
-        <div>CODE.</div>
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative w-full h-screen overflow-hidden">
+    <!-- Image Layers Wrapper -->
+    <div class="absolute inset-0 z-10 pointer-events-none">
+      
+      <!-- LAYER 1: Clean Portrait -->
+      <div class="layer layer-1" id="hero-area" style="pointer-events: auto;">
+        <!-- Subtle Normal Text -->
+        <div class="bg-text text-normal">
+          <div>CREATE</div>
+          <div>WEBSITES</div>
+          <div>NOT JUST</div>
+          <div>CODE.</div>
+        </div>
+        <div class="image-container"></div>
       </div>
-      <div class="image-container"></div>
-    </div>
 
-    <!-- LAYER 2: Futuristic Portrait (Masked) -->
-    <div class="layer layer-2" id="reveal-layer" style="--mask-x: -500px; --mask-y: -500px;">
-      <!-- Glowing Neon Text -->
-      <div class="bg-text text-neon">
-        <div>CREATE</div>
-        <div>WEBSITES</div>
-        <div>NOT JUST</div>
-        <div>CODE.</div>
-      </div>
-      <div class="image-container"></div>
-    </div>
-    
-  </div>
-
-  <!-- UI Overlay -->
-  <div class="ui-overlay">
-    
-    <!-- Header -->
-    <header class="flex justify-between items-center w-full">
-      <div class="text-sm font-bold tracking-widest uppercase">Manish</div>
-      <nav class="nav-links hidden md:flex gap-8 text-xs font-semibold tracking-wider text-zinc-500 uppercase">
-        <a href="#">About</a>
-        <a href="#">Skills</a>
-        <a href="#">Projects</a>
-        <a href="#">Experience</a>
-        <a href="#">Contact</a>
-      </nav>
-      <div class="md:hidden pointer-events-auto cursor-pointer">
-        <i data-lucide="menu"></i>
-      </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="interactive-content flex flex-col max-w-[500px] mb-20">
-      <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-6">
-        <span class="w-6 h-[1px] bg-brand"></span>
-        Full Stack Developer • AI • Creative Technologist
+      <!-- LAYER 2: Futuristic Portrait (Masked) -->
+      <div class="layer layer-2" id="reveal-layer" style="--mask-x: -500px; --mask-y: -500px;">
+        <!-- Glowing Neon Text -->
+        <div class="bg-text text-neon">
+          <div>CREATE</div>
+          <div>WEBSITES</div>
+          <div>NOT JUST</div>
+          <div>CODE.</div>
+        </div>
+        <div class="image-container"></div>
       </div>
       
-      <h1 class="text-6xl md:text-7xl font-black leading-[0.95] tracking-tight text-white mb-6">
-        I BUILD DIGITAL <br />
-        EXPERIENCES THAT <br />
-        <span class="text-brand">FEEL ALIVE.</span>
-      </h1>
-      
-      <p class="text-zinc-400 font-medium mb-10 max-w-sm leading-relaxed">
-        Developer, designer and creative technologist crafting high-performance websites, interactive experiences and AI-powered products.
-      </p>
+    </div>
 
-      <div class="flex items-center gap-6">
-        <a href="mailto:manish001yadav0@gmail.com" class="cta-btn" id="btn-connect" style="text-decoration: none;">
-          <div class="cta-hover-bg"></div>
-          <span>LET'S CONNECT</span>
-          <div class="cta-icon-wrapper">
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </div>
-        </a>
+    <!-- UI Overlay -->
+    <div class="ui-overlay">
+      
+      <!-- Header -->
+      <header class="flex justify-between items-center w-full relative z-50">
+        <div class="text-sm font-bold tracking-widest uppercase text-white">Manish</div>
+        <nav class="nav-links hidden md:flex gap-8 text-xs font-semibold tracking-wider text-zinc-500 uppercase">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="md:hidden pointer-events-auto cursor-pointer">
+          <i data-lucide="menu"></i>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <div class="interactive-content flex flex-col max-w-[500px] mb-20 relative z-40">
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-6">
+          <span class="w-6 h-[1px] bg-brand"></span>
+          Full Stack Developer • AI • Creative Technologist
+        </div>
         
-        <button class="secondary-btn" id="btn-work">
-          VIEW MY WORK <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-400"></i>
-        </button>
+        <h1 class="text-6xl md:text-7xl font-black leading-[0.95] tracking-tight text-white mb-6">
+          I BUILD DIGITAL <br />
+          EXPERIENCES THAT <br />
+          <span class="text-brand">FEEL ALIVE.</span>
+        </h1>
+        
+        <p class="text-zinc-400 font-medium mb-10 max-w-sm leading-relaxed">
+          Developer, designer and creative technologist crafting high-performance websites, interactive experiences and AI-powered products.
+        </p>
+
+        <div class="flex items-center gap-6">
+          <a href="mailto:manish001yadav0@gmail.com" class="cta-btn" id="btn-connect" style="text-decoration: none;">
+            <div class="cta-hover-bg"></div>
+            <span>LET'S CONNECT</span>
+            <div class="cta-icon-wrapper">
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </div>
+          </a>
+          
+          <a href="#projects" class="secondary-btn" id="btn-work">
+            VIEW MY WORK <i data-lucide="arrow-down" class="w-4 h-4 text-zinc-400"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Footer Info -->
+      <div class="absolute bottom-10 right-10 text-xs font-semibold tracking-widest uppercase text-zinc-400 flex flex-col items-end gap-2 z-40">
+        <span>Available for new projects</span>
+        <span class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          AI / LLM / Creative Dev
+        </span>
       </div>
     </div>
-    
-    <!-- Footer Info -->
-    <div class="absolute bottom-10 right-10 text-xs font-semibold tracking-widest uppercase text-zinc-400 flex flex-col items-end gap-2">
-      <span>Available for new projects</span>
-      <span class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-        AI / LLM / Creative Dev
-      </span>
-    </div>
+  </section>
 
-  </div>
+  <!-- PAGE CONTENT SECTIONS -->
+  <main class="relative z-40 w-full bg-[#111111] flex flex-col items-center">
+    
+    <!-- ABOUT SECTION -->
+    <section id="about" class="w-full max-w-[1200px] px-10 py-32 flex flex-col md:flex-row gap-16 border-t border-white/5">
+      <div class="md:w-1/3">
+        <h2 class="text-sm font-bold tracking-widest text-brand uppercase mb-4">01 // About</h2>
+        <h3 class="text-4xl font-black text-white leading-tight">Bridging logic<br>and imagination.</h3>
+      </div>
+      <div class="md:w-2/3 flex flex-col gap-6 text-zinc-400 text-lg leading-relaxed font-medium">
+        <p>I am a creative technologist specializing in the intersection of high-performance engineering and AI-driven design. I don't just write code; I architect systems that feel intuitive, fluid, and visually striking.</p>
+        <p>With a deep understanding of full-stack architecture and a relentless obsession with rendering performance, I build applications that push the boundaries of what's possible on the modern web. From 120fps WebGL interfaces to real-time LLM streaming layers, I thrive on complex technical challenges.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="w-full max-w-[1200px] px-10 py-32 border-t border-white/5">
+      <h2 class="text-sm font-bold tracking-widest text-brand uppercase mb-16">02 // Core Competencies</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="flex flex-col gap-4">
+          <i data-lucide="code-2" class="w-8 h-8 text-white mb-2"></i>
+          <h4 class="text-xl font-bold text-white">Frontend Architecture</h4>
+          <p class="text-zinc-500 font-medium leading-relaxed">React, Next.js, Vue, Tailwind CSS, Three.js, WebGL, GSAP.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <i data-lucide="server" class="w-8 h-8 text-white mb-2"></i>
+          <h4 class="text-xl font-bold text-white">Backend Systems</h4>
+          <p class="text-zinc-500 font-medium leading-relaxed">Node.js, Python, Go, PostgreSQL, Redis, Docker, AWS.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <i data-lucide="bot" class="w-8 h-8 text-white mb-2"></i>
+          <h4 class="text-xl font-bold text-white">AI / Machine Learning</h4>
+          <p class="text-zinc-500 font-medium leading-relaxed">PyTorch, LangChain, OpenAI API, Stable Diffusion, RAG.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="w-full max-w-[1200px] px-10 py-32 border-t border-white/5">
+      <h2 class="text-sm font-bold tracking-widest text-brand uppercase mb-16">03 // Selected Work</h2>
+      <div class="flex flex-col gap-24">
+        <!-- Project 1 -->
+        <div class="flex flex-col md:flex-row gap-10 group cursor-pointer">
+          <div class="md:w-1/2 aspect-video bg-zinc-900 rounded-xl overflow-hidden relative border border-white/10 group-hover:border-brand/50 transition-colors">
+            <div class="absolute inset-0 bg-gradient-to-br from-brand/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-zinc-800 font-black text-6xl">01</div>
+          </div>
+          <div class="md:w-1/2 flex flex-col justify-center">
+            <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Neon Core</h3>
+            <p class="text-zinc-400 font-medium mb-6 leading-relaxed">A real-time AI image generation engine with a custom WebGL hardware-accelerated frontend. Built to handle 120fps interaction layers over streaming WebSocket image data.</p>
+            <div class="flex gap-4">
+              <span class="text-xs font-bold tracking-wider text-brand px-3 py-1 bg-brand/10 rounded-full">React</span>
+              <span class="text-xs font-bold tracking-wider text-brand px-3 py-1 bg-brand/10 rounded-full">Python</span>
+              <span class="text-xs font-bold tracking-wider text-brand px-3 py-1 bg-brand/10 rounded-full">WebGL</span>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="flex flex-col md:flex-row-reverse gap-10 group cursor-pointer">
+          <div class="md:w-1/2 aspect-video bg-zinc-900 rounded-xl overflow-hidden relative border border-white/10 group-hover:border-brand/50 transition-colors">
+            <div class="absolute inset-0 bg-gradient-to-br from-brand/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-zinc-800 font-black text-6xl">02</div>
+          </div>
+          <div class="md:w-1/2 flex flex-col justify-center">
+            <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-brand transition-colors">Pulse Dashboard</h3>
+            <p class="text-zinc-400 font-medium mb-6 leading-relaxed">High-frequency algorithmic trading UI. Designed a custom canvas-based charting library to render millions of data points smoothly without dropping frames.</p>
+            <div class="flex gap-4">
+              <span class="text-xs font-bold tracking-wider text-brand px-3 py-1 bg-brand/10 rounded-full">TypeScript</span>
+              <span class="text-xs font-bold tracking-wider text-brand px-3 py-1 bg-brand/10 rounded-full">Canvas API</span>
+              <span class="text-xs font-bold tracking-wider text-brand px-3 py-1 bg-brand/10 rounded-full">Go</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="w-full max-w-[1200px] px-10 py-32 border-t border-white/5">
+      <h2 class="text-sm font-bold tracking-widest text-brand uppercase mb-16">04 // Experience</h2>
+      <div class="flex flex-col gap-12 border-l border-white/10 pl-8 ml-4">
+        <!-- Exp 1 -->
+        <div class="relative">
+          <div class="absolute -left-[41px] top-2 w-4 h-4 bg-[#111111] border-2 border-brand rounded-full"></div>
+          <div class="text-xs font-bold text-brand tracking-widest mb-2">2023 — PRESENT</div>
+          <h3 class="text-2xl font-bold text-white mb-1">Senior Creative Developer</h3>
+          <h4 class="text-lg text-zinc-500 font-medium mb-4">TechNova Labs</h4>
+          <p class="text-zinc-400 font-medium max-w-2xl leading-relaxed">Leading the frontend architecture for next-generation AI web tools. Reduced bundle sizes by 40% and pioneered a new WebGL interaction system for data visualization.</p>
+        </div>
+        <!-- Exp 2 -->
+        <div class="relative">
+          <div class="absolute -left-[41px] top-2 w-4 h-4 bg-[#111111] border-2 border-zinc-600 rounded-full"></div>
+          <div class="text-xs font-bold text-zinc-500 tracking-widest mb-2">2021 — 2023</div>
+          <h3 class="text-2xl font-bold text-white mb-1">Full Stack AI Engineer</h3>
+          <h4 class="text-lg text-zinc-500 font-medium mb-4">DataFlux Systems</h4>
+          <p class="text-zinc-400 font-medium max-w-2xl leading-relaxed">Architected microservices in Go and Python to handle massive data pipelines for LLM training. Built the internal dashboard used by 50+ researchers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="w-full max-w-[1200px] px-10 py-32 mb-20 border-t border-white/5 flex flex-col items-center text-center">
+      <h2 class="text-sm font-bold tracking-widest text-brand uppercase mb-6">05 // What's Next?</h2>
+      <h3 class="text-5xl md:text-7xl font-black text-white mb-10">Let's build<br>the future.</h3>
+      <p class="text-zinc-400 font-medium max-w-md mb-12 leading-relaxed">I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+      <a href="mailto:manish001yadav0@gmail.com" class="cta-btn cursor-none" style="text-decoration: none;">
+        <div class="cta-hover-bg"></div>
+        <span>SAY HELLO</span>
+        <div class="cta-icon-wrapper">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+        </div>
+      </a>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="w-full py-8 text-center text-zinc-600 text-sm font-bold tracking-widest border-t border-white/5">
+      © 2026 MANISH. DESIGNED & BUILT WITH ❤️.
+    </footer>
+  </main>
 
   <!-- Custom Cursor -->
   <div id="cursor">
